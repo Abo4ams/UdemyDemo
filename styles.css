@@ -3,6 +3,11 @@
 @import url('https://www.udemy.com/staticx/udemy/fonts/Udemy-Sans-Regular-v1.woff2') format('woff2');
 @import url('https://www.udemy.com/staticx/udemy/fonts/SuisseWorks-Bold-v1.woff2') format('woff2');
 
+
+.hide {
+    display: none !important;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -298,9 +303,6 @@ button:hover, .explore-btn:hover {
     align-items: center;
     text-align: left;
     width: 100vw;
-    height: auto;
-    margin: 0;
-    padding: 0;
     flex-direction: column;
 }
 
@@ -366,6 +368,63 @@ button:hover, .explore-btn:hover {
 }
 
 
+@media only screen and (max-width: 800px) {
+
+    .nohide {
+        display: none !important;
+    }
+
+    .hide {
+        display: block !important;
+    }
+
+    .prior {
+        flex-grow: 2;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .banner {
+        display: flex;
+        flex-direction: column;
+        max-width: 800px;
+        width: 100wv;
+    }
+
+    .banner img {
+        max-width: 800px;
+    }
+    
+    .billboard {
+        padding: 24px;
+        max-width: 440px;
+        position: unset;
+        display: block;
+        background: #fff;
+        box-shadow: none;
+        width: 100vw;
+        max-width: 800px;
+    }
+    
+    .container3 {
+        max-width: 800px;
+        margin-left: 25px;
+    }
+    
+    .tabs-container {
+        max-width: 800px;
+        width: 100vw;
+        margin-left: 25px;
+        flex-direction: column;
+        min-width: 0;
+    }
+
+
+  }
 
 
 
