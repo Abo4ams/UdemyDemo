@@ -353,7 +353,6 @@ button:hover, .explore-btn:hover {
     align-items: center;
     justify-content: center;
     border: 1px solid #d1d7dc;
-    overflow: hidden;
     width: 100%;
 }
 
