@@ -1,9 +1,4 @@
 
-@import url('https://www.udemy.com/staticx/udemy/fonts/Udemy-Sans-Bold-v1.woff2') format('woff2');
-@import url('https://www.udemy.com/staticx/udemy/fonts/Udemy-Sans-Regular-v1.woff2') format('woff2');
-@import url('https://www.udemy.com/staticx/udemy/fonts/SuisseWorks-Bold-v1.woff2') format('woff2');
-
-
 .hide {
     display: none !important;
 }
@@ -22,6 +17,7 @@ body {
     font-size: 1.6rem;
     color: #1c1d1f;
     margin: 0;
+    padding: 0;
 }
 
 li, a, .fnt {
@@ -80,7 +76,7 @@ button, .fnt-btn{
     justify-content: space-around;
     align-items: center;
     padding: 10px 10px;
-    width: 100%;
+    width: 100vw;
     box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
     z-index: 10;
 }
@@ -197,12 +193,12 @@ button:hover, .explore-btn:hover {
     display: inline-block;
     position: relative;
     max-width: 1340px;
-    width: 100wv;
+    width: 100vw;
 }
 
 .banner img {
     max-width: 1340px;
-    width: 100wv;
+    width: 100vw;
     height: auto;
 }
 
@@ -233,7 +229,7 @@ button:hover, .explore-btn:hover {
     justify-content: space-around;
     align-items: center;
     text-align: left;
-    width: 100vw;
+    width: 100%;
     height: auto;
     margin: 0;
     padding: 0;
@@ -252,20 +248,20 @@ button:hover, .explore-btn:hover {
 .headline-sub {
     margin-top: 0.6rem;
     max-width: 80rem;
-    width: 80rem;
+    width: 100vw;
 }
 
 .tabs-list {
     list-style: none;
     max-width: 80rem;
-    width: 80rem;
+    width: 93vw;
     justify-content: space-between;
     margin-bottom: 10px;
 }
 
 .tabs-list li {
     display: inline-block;
-    margin: 0 20px;
+    margin-right: 18px;
 }
 
 .tabs-list li a {
@@ -282,7 +278,7 @@ button:hover, .explore-btn:hover {
     outline-offset: -0.4rem!important;
     color: #6a6f73;
     position: relative;
-    width: 100%;
+    width: 100vw;
     font-weight: bold;
 }
 
@@ -290,7 +286,7 @@ button:hover, .explore-btn:hover {
     background: 0 0;
     outline-offset: -0.4rem!important;
     color: #1c1d1f;
-    width: 100%;
+    width: 100vw;
     cursor: default;
     padding: 0.4rem 0.5rem 0.4 0;
     position: relative;
@@ -310,13 +306,13 @@ button:hover, .explore-btn:hover {
     border: 1px solid #d1d7dc;
     padding: 15px;
     max-width: 80rem;
-    width: 80rem;
+    width: 100vw;
 }
 
 .skills-banner-text {
     max-width: 800px;
     width: 800px;
-    width: 100vw;
+    width: 93%;
     height: auto;
     margin-bottom: 30px;
 }
@@ -325,15 +321,15 @@ button:hover, .explore-btn:hover {
     display: flex;
     justify-content: space-around;
     max-width: 80rem;
-    width: 80rem;
-    margin: 0 20px 40px;
+    width: 100%;
+    margin: 0 2rem 4rem;
     flex-direction: column;
 }
 
 .courses {
     display: flex;
     max-width: 80rem;
-    width: 80rem;
+    width: 100vw;
     margin: 20px;
     flex-direction: row;
     flex-wrap: wrap;
@@ -344,8 +340,9 @@ button:hover, .explore-btn:hover {
     align-items: flex-start;
     flex-direction: column;
     max-width: 180px;
-    min-width: 15.3rem;
+    min-width: 13.8rem;
     padding: 1rem 0.5rem;
+    margin-right: 2rem;
 }
 
 .img-wrapper {
@@ -391,7 +388,7 @@ button:hover, .explore-btn:hover {
         display: flex;
         flex-direction: column;
         max-width: 800px;
-        width: 100wv;
+        width: 100vw;
     }
 
     .banner img {
@@ -416,12 +413,15 @@ button:hover, .explore-btn:hover {
     
     .tabs-container {
         max-width: 800px;
-        width: 100vw;
+        width: 92vw;
         margin-left: 25px;
         flex-direction: column;
         min-width: 0;
     }
 
+    .tabs-list li {
+        margin-right: auto;
+    }
 
   }
 
