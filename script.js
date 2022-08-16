@@ -1,5 +1,4 @@
-let numOfCourses = 0;
-let coursesJSON = null;
+let coursesJSON;
 
 function stars(rating) {
     let result = [];
@@ -22,47 +21,38 @@ async function populate() {
     const response = await fetch(request);
     coursesJSON = await response.json();
 
-    numOfCourses = coursesJSON.python.length;
-    populateCourses(coursesJSON);
+    populateCourses(coursesJSON.python);
 
 }
 
 function populateCourses(data) {
-    const courses = document.querySelector('.courses');
-    for(const i of data.python) {
-        let course = document.createElement("div");
-        let cName = "course " + i.id;
-        course.className = cName;
-        course.innerHTML = `
-        <div class="img-wrapper"><img src="${i.image}" alt="course image" width="220px" height="125px"/></div>
-        <div class="course-content">
-            <div class="inline-blck"><h3><a href="#" class="fnt-md">${i.title}</a></h3></div>
-            <div class="fnt-xs">${i.author}</div>
-            <div class="rate">${i.rating} <span class="stars">${stars(i.rating)}</span> <span class="fnt-xs">(${i.people})</span></div>
-            <div class="price fnt-md">E£${i.price}</div>
-        </div>`
-    courses.appendChild(course);
-    }
-    numOfCourses = coursesJSON.python.length;
+    const htmlString = data.map(course => {
+        return `
+        <div class="course ${course.id}">
+            <div class="img-wrapper"><img src="${course.image}" alt="course image" width="220px" height="125px"/></div>
+            <div class="course-content">
+                <div class="inline-blck"><h3><a href="#" class="fnt-md">${course.title}</a></h3></div>
+                <div class="fnt-xs">${course.author}</div>
+                <div class="rate">${course.rating} <span class="stars">${stars(course.rating)}</span> <span class="fnt-xs">(${course.people})</span></div>
+                <div class="price fnt-md">E£${course.price}</div>
+            </div>
+        </div>`;
+    }).join('');
+    document.querySelector('.courses').innerHTML = htmlString;
 }
 
-  populate();
+populate();
 
-
-const search = () => {
-    let input, filter, courses, course, item, txtValue;
+let input, courses, course, item, txtValue;
     input = document.getElementById("srch-input");
-    filter = input.value.toUpperCase();
     courses = document.getElementsByClassName("courses");
     course = document.querySelectorAll(".course");
     courseTitle = document.querySelectorAll(".course h3");
-    for(let i = 0; i < course.length; i++) {
-        item = courseTitle[i];
-        txtValue = item.textContent || item.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            course[i].style.display = "";
-        } else {
-            course[i].style.display = "none";
-        }
-    }
-}
+
+input.addEventListener('keyup', (e) =>{
+    const searchString = e.target.value.toLowerCase();
+    const filteredCourses = coursesJSON.python.filter(course => {
+        return course.title.toLowerCase().includes(searchString);
+    });
+    populateCourses(filteredCourses);
+});
