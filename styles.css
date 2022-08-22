@@ -26,8 +26,8 @@ li, a, .fnt {
     line-height: 1.2;
     letter-spacing: -.02rem;
     font-size: 0.95rem;
-    text-decoration: none;
-    color: #1c1d1f;
+    text-decoration: none !important;
+    color: #1c1d1f !important;
 }
 
 button, .fnt-btn{
@@ -71,7 +71,7 @@ button, .fnt-btn{
     color: #6a6f73;
 }
 
-.container {
+.container1 {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -91,6 +91,7 @@ button, .fnt-btn{
 
 .nav__links {
     list-style: none;
+    margin-bottom: 0;
 }
 
 .nav__links li {
@@ -258,18 +259,14 @@ button:hover, .explore-btn:hover {
     justify-content: space-between;
     margin-bottom: 10px;
 }
-
-.tabs-list li {
-    display: inline-block;
-    margin-right: 18px;
+.nav-link {
+    padding: 0.5rem 2rem 0.5rem 0 !important;
+    font-weight: bold;
+    color: #6a6f73 !important;
 }
 
-.tabs-list li a {
-    transform: all 0.3s ease 0s;
-}
-
-.tabs-list li a:hover {
-    color:#1c1d1f;
+.nav-link:hover {
+    color:#1c1d1f !important;
 }
 
 .tabs-nav-button {
@@ -369,6 +366,14 @@ button:hover, .explore-btn:hover {
 .stars {
     color: #e59819;
     font-size: 15px;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    top: 50% !important;
+    transform: translateY(-50%);
+    height: 50px !important;
+    width: 50px !important;
+    border-radius: 25px !important;
 }
 
 @media only screen and (max-width: 800px) {
