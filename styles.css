@@ -253,11 +253,12 @@ button:hover, .explore-btn:hover {
 }
 
 .tabs-list {
-    list-style: none;
-    max-width: 80rem;
-    width: 93vw;
-    justify-content: space-between;
-    margin-bottom: 10px;
+    list-style: none !important;
+    max-width: 80rem !important;
+    width: 93vw !important;
+    justify-content: flex-start !important;
+    margin-bottom: 10px !important;
+
 }
 .nav-link {
     padding: 0.5rem 2rem 0.5rem 0 !important;
@@ -265,8 +266,14 @@ button:hover, .explore-btn:hover {
     color: #6a6f73 !important;
 }
 
-.nav-link:hover {
+.nav-item:hover, .nav-link.active, .nav-link:hover{
     color:#1c1d1f !important;
+    border: none !important;
+}
+
+button:focus {
+    outline: 0px dotted !important;
+    outline: 0px auto -webkit-focus-ring-color !important;
 }
 
 .tabs-nav-button {
@@ -278,6 +285,8 @@ button:hover, .explore-btn:hover {
     width: 100vw;
     font-weight: bold;
 }
+
+
 
 .selected-btn {
     background: 0 0;

@@ -1,7 +1,7 @@
 {
-  "allTopics":[
+  "allTopics":
     {
-  "python":[
+  "python":
     {
       "title": "Top courses in Python",
       "header": "Expand your career opportunities with Python",
@@ -209,7 +209,7 @@
         }
       ]
     }
-  ], "excel":[
+  , "excel":
     {
       "title": "Top courses in Excel",
       "header": "Analyze and visualize data with Excel",
@@ -407,7 +407,7 @@
         }
       ]
     }
-  ], "web": [
+  , "web": 
     {
       "title": "Top courses in Web Development",
       "header": "Build websites and applications with Web Development",
@@ -615,7 +615,7 @@
         }
       ]
     }
-  ], "js": [
+  , "js": 
     {
       "title": "Top courses in JavaScript",
       "header": "Grow your software development skills with JavaScript",
@@ -818,7 +818,7 @@
         }
       ]
     }
-  ], "ds": [
+  , "ds": 
     {
       "title": "Top courses in Data Science",
       "header": "Lead data-driven decisions with Data Science",
@@ -1086,7 +1086,7 @@
         }
       ]
     }
-  ], "aws": [
+  , "aws": 
     {
       "title": "Top courses in AWS Certification",
       "header": "Become an expert in cloud computing with AWS Certification",
@@ -1279,7 +1279,7 @@
         }
       ]
     }
-  ], "drawing": [
+  , "drawing": 
     {
       "title": "Top courses in Drawing",
       "header": "Expand your creative skillset with Drawing",
@@ -1472,5 +1472,5 @@
         }
       ]
     }
-  ] }]
+   }
 }
