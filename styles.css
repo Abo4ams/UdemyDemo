@@ -369,6 +369,14 @@ button:hover, .explore-btn:hover {
     font-size: 15px;
 }
 
+.carousel-control-next, .carousel-control-prev {
+    top: 50% !important;
+    transform: translateY(-50%);
+    height: 50px !important;
+    width: 50px !important;
+    border-radius: 25px !important;
+}
+
 @media only screen and (max-width: 800px) {
 
     .nohide {
