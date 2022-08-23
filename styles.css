@@ -26,8 +26,8 @@ li, a, .fnt {
     line-height: 1.2;
     letter-spacing: -.02rem;
     font-size: 0.95rem;
-    text-decoration: none;
-    color: #1c1d1f;
+    text-decoration: none !important;
+    color: #1c1d1f !important;
 }
 
 button, .fnt-btn{
@@ -71,7 +71,7 @@ button, .fnt-btn{
     color: #6a6f73;
 }
 
-.container {
+.container1 {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -91,6 +91,7 @@ button, .fnt-btn{
 
 .nav__links {
     list-style: none;
+    margin-bottom: 0;
 }
 
 .nav__links li {
@@ -258,18 +259,14 @@ button:hover, .explore-btn:hover {
     justify-content: space-between;
     margin-bottom: 10px;
 }
-
-.tabs-list li {
-    display: inline-block;
-    margin-right: 18px;
+.nav-link {
+    padding: 0.5rem 2rem 0.5rem 0 !important;
+    font-weight: bold;
+    color: #6a6f73 !important;
 }
 
-.tabs-list li a {
-    transform: all 0.3s ease 0s;
-}
-
-.tabs-list li a:hover {
-    color:#1c1d1f;
+.nav-link:hover {
+    color:#1c1d1f !important;
 }
 
 .tabs-nav-button {
@@ -351,6 +348,7 @@ button:hover, .explore-btn:hover {
     justify-content: center;
     border: 1px solid #d1d7dc;
     width: 100%;
+    max-width: 252.2px;
 }
 
 .inline-blck {
@@ -431,4 +429,97 @@ button:hover, .explore-btn:hover {
     }
 
   }
-  
+  /*
+
+CC 2.0 License Iatek LLC 2018
+Attribution required
+
+*/
+
+@media (min-width: 768px) {
+
+    /* show 4 items */
+    .carousel-inner .active,
+    .carousel-inner .active + .carousel-item,
+    .carousel-inner .active + .carousel-item + .carousel-item,
+    .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
+        display: block;
+    }
+    
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item,
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+        transition: none;
+        margin-right: initial;
+    }
+    
+    .carousel-inner .carousel-item-next,
+    .carousel-inner .carousel-item-prev {
+      position: relative;
+      transform: translate3d(0, 0, 0);
+    }
+    
+    .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -33.3333%;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    
+    /* left or forward direction */
+    .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    .carousel-item-next.carousel-item-left + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    
+    /* farthest right hidden item must be abso position for animations */
+    .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    
+    /* right or prev direction */
+    .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    .carousel-item-prev.carousel-item-right + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+
+}
+
+.carousel-inner {
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+
+.carousel-control-next, .carousel-control-prev {
+    padding: 0 !important;
+    margin-left: -5px;
+    margin-right: 23px;
+    top: 30% !important;
+    transform: translateY(-50%);
+    height: 40px !important;
+    width: 40px !important;
+    border-radius: 20px !important;
+    background: #1c1d1f !important;
+}
+

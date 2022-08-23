@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Udemy</title>
 </head>
 <body>
     <header>
         <div>
             <nav>
-                <ul class="nav__links container">
+                <ul class="nav__links container1">
                     <li class="hide"><i class="fas fa-bars"></i></li>
                     <li class="prior"><div class="logo"><a href="#"><img class="logo" src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg" alt="Udemy Logo" width="91" height="34"/></a></div></li>
                     <li class="hide"><i class="fa fa-search" aria-hidden="true"></i></li>
@@ -48,29 +49,25 @@
     <div class="container3"><div class="headline-sub fnt">
         Choose from 185,000 online video courses with new additions published every month
     </div></div>
+
+    
     <div class="tabs-container">
-        <div>
-            <ul class="tabs-list">
-                <li><a class="selected-btn" href="#">Python</a></li>
-                <li><a class="tabs-nav-button" href="#">Excel</a></li>
-                <li><a class="tabs-nav-button" href="#">Web Development</a></li>
-                <li><a class="tabs-nav-button" href="#">JavaScript</a></li>
-                <li><a class="tabs-nav-button" href="#">Data Science</a></li>
-                <li><a class="tabs-nav-button" href="#">AWS Certification</a></li>
-                <li><a class="tabs-nav-button" href="#">Drawing</a></li>
-            </ul>
+        <div class="tabs-list">
+            <nav class="nav">
+                <a id="python" class="nav-link active" aria-current="page" href="#">Python</a>
+                <a id="excel" class="nav-link" href="#">Excel</a>
+                <a id="web" class="nav-link" href="#">Web Development</a>
+                <a id="js" class="nav-link" href="#">JavaScript</a>
+                <a id="ds" class="nav-link" href="#">Data Science</a>
+                <a id="aws" class="nav-link" href="#">AWS Certification</a>
+                <a id="drawing" class="nav-link" href="#">Drawing</a>
+            </nav>
         </div>
         <div class="skills-hub">
-            <div class="skills-banner">
-                <div class="skills-banner-text">
-                    <h1 class="fnt-h-xl">Expand your career opportunities with Python</h1>
-                    <p class="fnt-p">Take one of Udemy’s range of Python courses and learn how to code using this incredibly useful language. Its simple syntax and readability makes Python perfect for Flask, Django, data science, and machine learning. You’ll learn how to build everything from games to sites to apps. Choose from a range of courses that will appeal to both beginners and advanced developers alike.</p>
-                </div>
-                <a href="#"><span class="explore-btn fnt-btn">Explore Python</span></a>
-            </div>
-            <div class="courses"></div>
         </div>
     </div>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
 </body>
 </html>
